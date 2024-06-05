@@ -45,7 +45,8 @@ UPDATE dentista SET telefone = '1337895234', celular = '13994370034', especialid
 	
 SELECT * FROM dentista
 
-
+/*Exercicio 6. Atualizar a data e hora de uma consulta marcada com um dentista cuja especialidade é Geral*/
+UPDATE consulta SET dataConsulta = '2024-08-10', horaConsulta = '16:50:00' WHERE idPaciente = 5;
 
 
 		
