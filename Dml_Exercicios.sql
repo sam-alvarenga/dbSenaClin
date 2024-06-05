@@ -39,6 +39,14 @@ VALUES ('2024-05-23', '15:35:12', 'Avaliacao', 4, 1),
 
 select * from consulta 
 
+/*Exercicio 5. Atualizar todos os dados, exceto nome e cro, do dentista que cuida de implantodontia, mudando sua especialidade para Geral; */
+
+UPDATE dentista SET telefone = '1337895234', celular = '13994370034', especialidade = 'geral' WHERE idDentista = 4;
+	
+SELECT * FROM dentista
+
+
+
 
 		
 
