@@ -44,4 +44,4 @@ CONSTRAINT fk_consulta_dentista FOREIGN KEY (idDentista) REFERENCES dentista (id
 
 SELECT * FROM consulta
 
-
+ALTER TABLE consulta ADD COLUMN tipoConsulta VARCHAR(50) NOT NULL;
