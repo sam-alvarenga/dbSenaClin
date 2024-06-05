@@ -30,8 +30,14 @@ VALUES('Bruna Izzo', 'SP873278', 'Implantodontia', '1336647832', '13995420278');
 
 SELECT * FROM dentista
 
+/*Exercicio 4. Inserir 3 consultas, sendo 1 para o dentista que cuida de Ortodontia e 2 para o dentista cuja especialidade é Geral. O tipo de todas elas será Avaliação.*/
 
+INSERT INTO consulta (dataConsulta, horaConsulta,tipoConsulta, idPaciente, idDentista)
+VALUES ('2024-05-23', '15:35:12', 'Avaliacao', 4, 1),
+		 ('2024-03-15', '10:00:00', 'Avaliacao', 1, 2),
+	    ('2024-09-08', '17:43:24', 'Avaliacao', 5, 2);
 
+select * from consulta 
 
 
 		
