@@ -17,6 +17,18 @@ VALUES ('Samantha Alvarenga', '32165498701', 'Rua', 'Nove de Julho', '80', 'Apt 
 
 SELECT * FROM paciente
 
+/* Exercicio 3.Inserir 4 dentistas de forma explícita, sendo 1 de cada especialidade;*/
+
+INSERT INTO Dentista(nomeDentista, CRO, especialidade, telefone, celular) 
+VALUES('Magda Rodrigues', 'SP897823', 'Ortodontia', '1334573234', '13999877859');
+INSERT INTO Dentista(nomeDentista, CRO, especialidade, telefone, celular) 
+VALUES('Paulo Herinque', 'SP906714', 'Geral', '1335675648','13991324568');
+INSERT INTO Dentista(nomeDentista, CRO, especialidade, telefone, celular)
+VALUES('Fernanda Álvares', 'SP567609', 'Periodontia', '1332780908', '13994614518');
+INSERT INTO Dentista(nomeDentista, CRO, especialidade, telefone, celular) 
+VALUES('Bruna Izzo', 'SP873278', 'Implantodontia', '1336647832', '13995420278');
+
+SELECT * FROM dentista
 
 
 
