@@ -53,6 +53,12 @@ UPDATE consulta SET dataConsulta = '2024-08-10', horaConsulta = '16:50:00' WHERE
 
 UPDATE consulta SET observacao = 'Tratamento será realizado em 10 consultas. Prioridade: Moderada. Remédio aplicado: Ponstan, caso sinta dores', consulta.tipoConsulta = 'tratamento' WHERE idDentista = 1;
 
+/*Exercicio 8. Selecionar nome e telefone de todo os pacientes que residem em Santos, em ordem alfabética*/
+
+SELECT paciente.nome, paciente.telefone, paciente.cidade  from paciente
+WHERE paciente.cidade='Santos'
+ORDER BY paciente.nome;
+
 		
 
 		
