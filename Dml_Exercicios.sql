@@ -85,3 +85,9 @@ ORDER BY dentista.especialidade;
 SELECT COUNT(consulta.idConsulta) AS 'consultas Maio' FROM consulta
 WHERE consulta.dataConsulta >= '2024-05-01'
 AND consulta.dataConsulta < '2024-05-31';
+
+/*13.	Criar uma query que traga todos os tipos de consulta, agrupadas pela quantidade.*/
+ 
+SELECT COUNT(consulta.tipoConsulta) AS 'Consultas', consulta.tipoConsulta FROM consulta
+GROUP BY consulta.tipoConsulta
+ORDER BY COUNT(consulta.idConsulta);
