@@ -82,12 +82,16 @@ ORDER BY dentista.especialidade;
 
 /*Exercicio 12. Criar uma query que mostre a quantidade de consultas que a clínica possui em determinado período do ano. Escolher um mês que retorne ao menos uma consulta, e incluir o mês como filtro.*/
 
-SELECT COUNT(consulta.idConsulta) AS 'consultas Maio' FROM consulta
+SELECT COUNT(consulta.idConsulta) AS 'Consultas Maio' FROM consulta
 WHERE consulta.dataConsulta >= '2024-05-01'
-AND consulta.dataConsulta < '2024-05-31';
+AND consulta.dataConsulta <='2024-05-31';
 
 /*13.	Criar uma query que traga todos os tipos de consulta, agrupadas pela quantidade.*/
  
 SELECT COUNT(consulta.tipoConsulta) AS 'Consultas', consulta.tipoConsulta FROM consulta
 GROUP BY consulta.tipoConsulta
 ORDER BY COUNT(consulta.idConsulta);
+
+/*14.	Criar uma query que traga o número de pacientes que a clínica possui.*/
+ 
+SELECT COUNT(paciente.idPaciente) AS 'Pacientes Cadastrados' FROM paciente;
