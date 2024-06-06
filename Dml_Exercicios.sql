@@ -79,3 +79,9 @@ ON consulta.idConsulta = dentista.idDentista WHERE dentista.idDentista > 0;
 SELECT dentista.especialidade, COUNT(dentista.nomeDentista) AS 'qtd Dentistas' FROM dentista 
 GROUP BY dentista.especialidade
 ORDER BY dentista.especialidade;
+
+/*Exercicio 12. Criar uma query que mostre a quantidade de consultas que a clínica possui em determinado período do ano. Escolher um mês que retorne ao menos uma consulta, e incluir o mês como filtro.*/
+
+SELECT COUNT(consulta.idConsulta) AS 'consultas Maio' FROM consulta
+WHERE consulta.dataConsulta >= '2024-05-01'
+AND consulta.dataConsulta < '2024-05-31';
