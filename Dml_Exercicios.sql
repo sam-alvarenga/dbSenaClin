@@ -124,6 +124,23 @@ ORDER BY dataConsulta DESC;
 
 CALL ps_Consultas_Especialidade('Geral')
 
+/*17.	Crie uma view similar ao exercício 13. Execute a view para testar.*/
+
+CREATE VIEW vw_consultas AS 
+SELECT COUNT(consulta.tipoConsulta) AS 'Consultas', consulta.tipoConsulta FROM consulta
+GROUP BY consulta.tipoConsulta 
+ORDER BY COUNT(consulta.idConsulta);
+
+SELECT * FROM vw_consultas;
+
+/*Desafio - Criar uma query que traga quantas consultas cada um dos dentistas realizou ao longo de todo o período, 
+ ordenando as do que atendeu mais pacientes para o que atendeu menos. */
+ 
+SELECT COUNT(idConsulta) AS 'Consultas realizadas', dentista.nomeDentista AS 'Dentista' FROM consulta 
+RIGHT JOIN dentista 
+ON consulta.idDentista = dentista.idDentista 
+GROUP BY dentista.idDentista 
+ORDER BY COUNT(idConsulta) DESC;
 
 
 
