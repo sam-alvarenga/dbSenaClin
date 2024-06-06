@@ -95,3 +95,18 @@ ORDER BY COUNT(consulta.idConsulta);
 /*14.	Criar uma query que traga o número de pacientes que a clínica possui.*/
  
 SELECT COUNT(paciente.idPaciente) AS 'Pacientes Cadastrados' FROM paciente;
+
+/*15.	Criar uma query que traga todas as consultas da especialidade implantodontia. 
+Deve vir na query o nome do dentista, o cro, a data da consulta e o nome do paciente, 
+ordenados da data mais atual para a mais antiga.*/
+ 
+SELECT dentista.nomeDentista, dentista.cro, consulta.dataConsulta, paciente.nome  FROM consulta
+INNER JOIN dentista 
+ON consulta.idDentista = dentista.idDentista 
+INNER JOIN paciente 
+ON paciente.idPaciente = consulta.idPaciente
+WHERE dentista.especialidade = 'implantodontia'
+ORDER BY consulta.dataConsulta DESC;
+ 
+ 
+
