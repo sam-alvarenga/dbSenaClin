@@ -74,6 +74,8 @@ FROM dentista
 LEFT JOIN consulta
 ON consulta.idConsulta = dentista.idDentista WHERE dentista.idDentista > 0;
 		
-
+/*Exercicio 11. Criar uma query que exiba a quantidade de dentistas que a clínica possui, agrupando-os por especialidade, ordenando pelo nome da especialidade de A-Z. Para isto, você utilizará o comando group by do SQL.*/
 		
-
+SELECT dentista.especialidade, COUNT(dentista.nomeDentista) AS 'qtd Dentistas' FROM dentista 
+GROUP BY dentista.especialidade
+ORDER BY dentista.especialidade;
